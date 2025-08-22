@@ -1,0 +1,129 @@
+.mysuiso-container {
+  padding: 16px;
+  text-align: center;
+  min-height: 100vh;
+  color: #004466;
+  font-weight: 600;
+  user-select: none;
+  background-color: rgb(255, 200, 232);
+  font-family: 'Mochiy Pop One', serif;
+}
+
+.background-selector-area {
+  margin-bottom: 0px;
+  font-weight: 600;
+  margin-top: -20px;
+}
+
+.aquarium {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: 94%;
+  max-width: 600px;
+  min-height: 385px;
+  overflow: hidden;
+  transform: translateX(-12px);
+  margin-top: -20px;
+}
+
+.swimming-fish {
+  position: absolute;
+  width: 80px;
+  height: auto;
+  user-select: none;
+  cursor: default;
+  transform-origin: center;
+  transform: scaleX(var(--facing));
+}
+
+
+.bubble {
+  position: absolute;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: rise linear infinite;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-300px) scale(0.5);
+    opacity: 0;
+  }
+}
+
+.food {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #8b5a2b;
+  box-shadow: 0 0 4px rgba(0,0,0,0.25);
+  pointer-events: none;
+  z-index: 25;
+  transform: translate(-50%, -50%);
+}
+
+.title-area {
+  margin-top: 43px;
+  margin-bottom: 12px;
+}
+
+.subtitle-area {
+  margin-top: -16px;
+  margin-bottom: 25px;
+  font-size: 16px;
+  color: #444;
+}
+
+.feed-food-area {
+  margin-bottom: 21px;
+  margin-top: 0px;
+}
+
+.feed-food-area button {
+  font-size: 14px;
+}
+
+.top-controls-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 600px;
+  margin-bottom: -15px;
+}
+.food-stock-display {
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: #333;
+  font-size: 14px;
+  margin-top: -24px;
+}
+.fish-catalog-button {
+  position: fixed;  /* または absolute */     /* 右端からの距離 */
+  z-index: 1000;    /* ヘッダーより大きくする */
+  margin-top: 43px;
+  top: 20px;
+  right: 20px;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  background-color: #0077aa;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}

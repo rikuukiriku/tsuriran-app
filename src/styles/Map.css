@@ -1,0 +1,112 @@
+.map-container {
+  height: calc(100vh -60px); /* ← JS側と合わせるときれい！ */
+  margin-top: 55px;
+  width: 100%; /* ← 横幅も戻しておく */
+}
+.leaflet-top.leaflet-right {
+  top: -5px;  /* ← ヘッダーの高さに応じて調整（例：60px） */
+  right: -5px; /* ← 右からの距離 */
+  z-index: 1000; /* ← ヘッダーに隠れないように */
+}
+.search-bar {
+  position: absolute;
+  top: 53px;
+  left: 10px;
+  right: 10px; /* ← これを追加して、はみ出さないように */
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 300px; /* ← 最大幅を制限して崩れ防止 */
+  background-color: white;
+  padding: 4px 6px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.search-bar input {
+  flex: 1; /* ← 入力欄の幅を自動調整 */
+  min-width: 0;
+  padding: 4px 6px;
+  font-size: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.search-bar button {
+  padding: 4px 8px;
+  font-size: 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-icon {
+  font-size: 24px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.no-results {
+  position: absolute;
+  top: 92px;
+  right: 190px;
+  background: white;
+  padding: 4px 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 10px;
+  color: red;
+  z-index: 1000;
+}
+.card-carousel {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.card {
+  background-color: white;
+  padding: 12px 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  text-align: center;
+  min-width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.card-buttons button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+/* 著作権表示の位置を右下に変更 */
+.leaflet-control-attribution {
+  position: absolute !important;
+  bottom: 145px;
+  right: 5px;
+  left: auto !important;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.8); /* 半透明背景（必要なら） */
+  padding: 2px 6px;
+  font-size: 10px;
+}

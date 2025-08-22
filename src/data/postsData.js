@@ -1,0 +1,57 @@
+// src/data/postsData.js
+const postsData = [
+  {
+    id: 1,
+    user: "Riku",
+    fish: "タイ",
+    size: 45,
+    bait: "オキアミ",
+    spot: "淡路島",
+    image: "background.jpg", // ← src にある画像名
+    likes: 10,
+    comments: ["すごい！", "でかい！"],
+    category: ["大物賞", "最新投稿"],
+    date: "2025-08-01",
+  },
+  {
+    id: 2,
+    user: "Riku",
+    fish: "アジ",
+    size: 18,
+    bait: "サビキ",
+    spot: "大阪港",
+    image: "background.jpg",
+    likes: 5,
+    comments: ["おいしそう！"],
+    category: ["小物賞", "最新投稿"],
+    date: "2025-08-02",
+  },
+  {
+    id: 3,
+    user: "Riku",
+    fish: "クロダイ",
+    size: 30,
+    bait: "サビキ",
+    spot: "大阪港",
+    image: "background.jpg",
+    likes: 5,
+    comments: ["おいしそう！"],
+    category: ["小物賞", "最新投稿"],
+    date: "2025-08-02",
+  },
+  {
+    id: 4,
+    user: "Riku",
+    fish: "アジ",
+    size: 18,
+    bait: "サビキ",
+    spot: "大阪港",
+    image: "background.jpg",
+    likes: 5,
+    comments: ["おいしそう！めっちゃいいの釣れたからみんな見て"],
+    category: ["小物賞", "最新投稿"],
+    date: "2025-08-02",
+  },
+];
+
+export default postsData;

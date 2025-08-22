@@ -1,0 +1,109 @@
+/* src/styles/PostForm.css */
+
+.post-form-page {
+  background-color: #eeffcc;
+  padding: 20px;
+  min-height: 100vh;
+  font-family: sans-serif;
+  padding-top: 55px;
+}
+
+.post-title {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 16px;
+  font-weight: bold;
+  font-family: 'Mochiy Pop One', serif;
+}
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  background-color: white;
+}
+
+textarea {
+  resize: none;
+}
+
+.image-upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #aaa;
+  border-radius: 10px;
+  height: 200px;
+  cursor: pointer;
+  position: relative;
+  background-color: #fff;
+}
+
+.image-upload input {
+  display: none;
+}
+
+.upload-placeholder {
+  color: #666;
+  font-size: 16px;
+}
+
+.image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.privacy-options {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-left: 8px;
+  font-size: 14px;
+}
+
+.terms-check {
+  font-size: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 10px 0;
+  color: #333;
+}
+
+/* 投稿ボタン中央寄せ（出現時） */
+.submit-button {
+  background-color: #00aa66;
+  color: white;
+  font-size: 17px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 0 auto;
+  display: block;
+}
+
+.submit-button:hover {
+  background-color: #00995a;
+}
+.post-form {
+  padding-bottom: 100px; /* ← ナビバーの高さ＋余裕分 */
+}

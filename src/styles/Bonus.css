@@ -1,0 +1,230 @@
+.bonus-container {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  padding: 20px;
+  font-family: 'Mochiy Pop One', sans-serif;
+  color: #333;
+  background-color: #d0e8f2; /* 薄いブルー背景 */
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding-bottom: 45px;
+}
+
+.bonus-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1a237e;
+  text-shadow: 0 0 4px #bbdefb;
+}
+
+.daily-bonus-section {
+  background: linear-gradient(135deg, #ffd700, #ffec8b); /* 金ピカ */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #ffdc00;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.daily-bonus-section p {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 8px 0;
+  color: #4a3400;
+  text-shadow: 0 0 3px #fff7a8;
+}
+
+.claim-button {
+  background-color: #fbc02d;
+  border: none;
+  padding: 12px 30px;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #fbc02d;
+  transition: background-color 0.3s ease;
+  color: #5d3a00;
+  user-select: none;
+}
+
+.claim-button:hover:not(.claimed) {
+  background-color: #ffeb3b;
+  box-shadow: 0 0 20px #ffeb3b;
+}
+
+.claim-button.claimed {
+  background-color: #aaa;
+  cursor: default;
+  box-shadow: none;
+  color: #555;
+}
+
+.missions-section h2 {
+  margin-bottom: 10px;
+  color: #0d47a1;
+  text-shadow: 0 0 4px #82b1ff;
+  font-weight: 800;
+}
+
+.missions-section p {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.missions-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.mission-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  user-select: none;
+}
+
+.mission-item:hover {
+  box-shadow: 0 0 14px #64b5f6;
+}
+
+.mission-item.completed {
+  background: linear-gradient(135deg, #a8ffdb, #59dfff);
+  box-shadow: 0 0 20px #00e676;
+  color: #004d40;
+  animation: glowPulse 2.5s infinite alternate;
+}
+
+@keyframes glowPulse {
+  from {
+    box-shadow: 0 0 20px #00e676;
+  }
+  to {
+    box-shadow: 0 0 30px #69f0ae;
+  }
+}
+
+.mission-text {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.mission-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.check-icon {
+  color: #bbb;
+  transition: color 0.4s ease, transform 0.3s ease;
+  transform: scale(1);
+}
+
+.check-icon.active {
+  color: #00e676;
+  filter: drop-shadow(0 0 6px #00e676);
+  transform: scale(1.2);
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 6px #00e676);
+  }
+  50% {
+    transform: scale(1);
+    filter: none;
+  }
+}
+
+.xp-label {
+  font-weight: 700;
+  color: #00796b;
+  font-size: 14px;
+  user-select: none;
+}
+/* 宝箱まわり */
+.treasure-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.treasure-box {
+  width: 140px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.6s cubic-bezier(.2,.9,.2,1), filter 0.4s;
+  transform-origin: center bottom;
+  display: inline-block;
+}
+.treasure-box img {
+  width: 100%;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* 開いた時の軽いアニメ */
+.treasure-box.opened {
+  transform: translateY(-6px) scale(1.06) rotate(-2deg);
+  filter: drop-shadow(0 18px 28px rgba(0,0,0,0.18));
+}
+
+/* ポップアップ（餌 +10） */
+.reward-popup {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  background: linear-gradient(90deg, rgba(255,255,255,0.98), rgba(255,250,235,0.98));
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: 900;
+  color: #ff6f00;
+  box-shadow: 0 8px 30px rgba(255, 152, 0, 0.14);
+  animation: popupIn 0.6s ease forwards;
+  z-index: 40;
+  pointer-events: none;
+}
+
+@keyframes popupIn {
+  0% { opacity: 0; transform: translate(-50%, -10%) scale(0.95); }
+  60% { opacity: 1; transform: translate(-50%, -26%) scale(1.04); }
+  100% { opacity: 1; transform: translate(-50%, -30%) scale(1); }
+}
+.reward-label {
+  font-weight: 700;
+  color: #00796b;
+  font-size: 15px;
+  user-select: none;
+  white-space: nowrap;
+}
+.streak-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(135deg, #ff5252, #ff1744);
+  color: white;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}

@@ -1,0 +1,172 @@
+/* 各セクションを独立させるためのラッパー */
+.wrapper {
+  position: relative;
+}
+
+/* 各セクションごとに明示（必要なら個別カスタムできる） */
+.main-title-wrapper {}
+.ranking-label-wrapper {}
+.section-wrapper {}
+.white-boxes-wrapper {}
+.safety-message-wrapper {}
+.icon-bar-wrapper {}
+
+.section-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 66px;
+  margin-top: 20px;
+  text-shadow: 0 0 10px #000100ff, 0 0 5px #0c0c04ff, 0 0 5px #080f12ff;
+}
+
+.section-label {
+  font-size: 25px;
+  color: white;
+  margin: 0;
+  font-family: 'Reggae One', serif;
+  display: flex;
+  align-items: center;
+  position: relative;
+   margin-top: 0px;
+}
+.section-label-small {
+  margin-right: -25px;
+}
+
+/* ⭕ ツールチップの表示ボタン（丸いアイコン） */
+/* 共通スタイルはそのまま活かす */
+.tooltip-icon {
+  margin-left: 8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #cccccc;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  font-size: 10px;
+  line-height: 16px;
+  position: relative;
+}
+
+/* 👇 それぞれで個別調整 */
+.tooltip-icon-big {
+  top: 2px;
+  left:0%;
+}
+
+.tooltip-icon-small {
+  top: 2px;
+  left: 0%; /* ← 小物のアイコンだけ少し右へ */
+}
+
+/* tooltip-box も必要なら個別調整できる */
+.tooltip-box-big {
+  left: 90%;
+}
+
+.tooltip-box-small {
+  left: -10%; /* ← 小物の吹き出しも少し右へ */
+}
+
+.tooltip-box {
+  background-color: #000000;
+  border-radius: 15px;
+  padding: 4px 3px;
+  font-size: 10px;
+  min-width: 119px;
+  color: #ffffff;
+  position: absolute;
+  top: -50%;
+  left: 90%;
+  bottom: 85%; /* 上に表示 */
+  transform: translateX(-50%);
+  z-index: 10;
+  white-space: normal;
+}
+
+.tooltip-box::before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+   border-color: #000000 transparent transparent transparent;
+}
+
+/* ⭕ クリックで表示するための状態 */
+.tooltip-icon.active .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.home-container {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 125px 10px 10px 10px; /* 上に110pxの余白を内側に作る */
+  margin: 0;                    /* marginはリセット */
+  box-sizing: border-box;       /* パディングを含めてサイズを計算 */
+}
+/* タイトル */
+.main-title {
+  font-size: 55px;
+  text-align: center;
+  margin-top: -55px;
+  font-family: 'Reggae One', serif;
+  text-shadow: 0 0 0px #ffff33, 0 0 0px #ffff33, 0 0 7px #ffff33;
+}
+
+/* ランキング見出し共通 */
+.ranking-label {
+  font-size: 40px;
+  text-align: center;
+  margin: 5px 0;
+  font-weight: 700;
+  font-family: 'Reggae One', serif;
+  white-space: nowrap;
+  text-shadow: 0 0 0px #ffff33, 0 0 0px #ffff33, 0 0 4px #ffff33;
+}
+
+.ranking-label-big {
+  margin-top: -25px;
+  padding-right: 70px;
+}
+
+.ranking-label-small {
+  margin-top: -10px;
+  padding-left: 50px;
+}
+
+/* 白いボックス */
+.white-boxes {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.white-box {
+  width: 160px;
+  height: 160px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-top: -18px;
+}
+
+/* 安全に楽しもう */
+.safety-message {
+  text-align: center;
+  margin-top: -20px;
+}
+
+.safety-title {
+  font-size: 50px;
+  font-weight: 700;
+  font-family: 'Mochiy Pop One', serif;
+  text-shadow: 0 0 2px #eb0505ff, 0 0 2px #ee2b09ff, 0 0 5px #f02213ff;
+  color: white;
+}

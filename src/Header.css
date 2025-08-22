@@ -1,0 +1,133 @@
+/* ヘッダー全体 */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 55px;
+  background-color: #fffffff8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  z-index: 1001;
+  border-bottom: 1px solid #ccc;
+}
+
+/* メニューアイコン */
+.menu-icon {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+
+.logo-image {
+  height: 60px;
+  position: absolute;
+  top: -15px;
+  left: 82px;
+}
+
+.site-title {
+  font-size: 20px;
+  margin: 0;
+  font-family: 'Mochiy Pop One', sans-serif;
+  color: #333;
+  padding-left: 40px;
+}
+
+.site-subtitle {
+  font-size: 12px;
+  margin: 0;
+  color: #555;
+  font-family: 'Hina Mincho', sans-serif;
+  font-weight: 650;
+  padding-left: 23px;
+}
+
+/* 戻るボタン */
+.back-button {
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* スライドメニュー */
+.slide-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  transition: left 0.3s ease;
+  z-index: 1000;
+  padding-top: 55px;
+}
+
+.slide-menu.open {
+  left: 0;
+}
+
+/* メニューリスト */
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 10px 20px;
+}
+
+.menu-list li {
+  margin-bottom: 12px;
+}
+
+.menu-list li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+/* 背景のオーバーレイ */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+/* ロゴ全体にリンクをかける場合 */
+.logo-link {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ロゴとタイトルの縦並び中央揃え */
+.logo-title-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+/* Header.css の最後に追加してください */
+
+.treasure-icon {
+  font-size: 28px;
+  color: #FFD700; /* 金色 */
+  margin-left: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.treasure-icon:hover {
+  transform: scale(1.2);
+  color: orange;
+}

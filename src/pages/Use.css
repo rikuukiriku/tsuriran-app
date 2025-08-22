@@ -1,0 +1,46 @@
+.howto-wrapper {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.howto-wrapper h1 {
+  font-size: 40px;
+  color: #1a4d6e;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.howto-wrapper h2 {
+  font-size: 22px;
+  margin-top: 25px;
+  color: #19536B;
+}
+
+.howto-wrapper p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.howto-wrapper ul {
+  margin-left: 20px;
+  padding-left: 15px;
+}
+
+.howto-wrapper li {
+  margin-bottom: 8px;
+}
+
+.bold {
+  font-weight: bold;
+  color: #0b2e45;
+}
+.howto-wrapper ul,
+.howto-wrapper ul li {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
